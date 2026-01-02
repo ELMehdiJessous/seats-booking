@@ -3,23 +3,37 @@
 POST http://127.0.0.1:8000/signup
 Content-Type: application/json
 
-{"username":"mehdi3","email":"mehdi@gmail.com","password":"password123"}
+{"username":"hmed","email":"mehdi@gmail.com","password":"password123"}
 
 ###
 
 POST http://127.0.0.1:8000/login
 Content-Type: application/json
 
-{"username":"mehdi3","password":"password123"}
+{"username":"hmed","password":"password123"}
 
 ###
 
 GET  http://127.0.0.1:8000/token_test
 Content-Type: application/json
-Authorization: token 16395463f0053aa1e8e0323c140d807e974ead7d
+Authorization: token d0df16d606f0b11e1d9810aaab5fad8d8f4b7847
 
 ###
 
 GET  http://127.0.0.1:8000/logout
 Content-Type: application/json
-Authorization: token 16395463f0053aa1e8e0323c140d807e974ead7d
+Authorization: token 8db00556646a98d9e0cc1d660f20d14e3adaf8ad
+
+###
+
+GET  http://127.0.0.1:8000/api/trips/
+
+###
+POST http://127.0.0.1:8000/api/reserve/
+Content-Type: application/json
+Authorization: Token d0df16d606f0b11e1d9810aaab5fad8d8f4b7847
+
+{
+  "trip": 2,
+  "seat_number": 6
+}
